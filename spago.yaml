@@ -1,0 +1,13 @@
+package:
+  name: "js-date"
+  dependencies:
+    - datetime
+    - effect
+    - foreign
+    - integers
+  test:
+    main: Test.Main
+    dependencies:
+      - assert
+      - console
+      - numbers
