@@ -153,7 +153,17 @@ var DateMethodEff = gopurs_runtime.Func2(func(method, date gopurs_runtime.Value)
 var Parse = gopurs_runtime.Func(func(dateString gopurs_runtime.Value) gopurs_runtime.Value {
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 		str := dateString.StrVal()
-		t, err := time.Parse("2006-01-02T15:04:05", str)
+		t, err := time.Parse(time.RFC3339, str)
+		if err == nil {
+			return boxDate(float64(t.UnixMilli()))
+		}
+
+		t, err = time.Parse("2006-01-02T15:04:05.000Z", str)
+		if err == nil {
+			return boxDate(float64(t.UnixMilli()))
+		}
+		
+		t, err = time.Parse("2006-01-02T15:04:05", str)
 		if err == nil {
 			return boxDate(float64(t.UnixMilli()))
 		}
