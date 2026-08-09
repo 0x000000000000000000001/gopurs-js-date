@@ -163,6 +163,11 @@ var Parse = gopurs_runtime.Func(func(dateString gopurs_runtime.Value) gopurs_run
 			return boxDate(float64(t.UnixMilli()))
 		}
 		
+		t, err = time.Parse("2006-01-02:15:04:05Z", str)
+		if err == nil {
+			return boxDate(float64(t.UnixMilli()))
+		}
+		
 		t, err = time.Parse("2006-01-02T15:04:05", str)
 		if err == nil {
 			return boxDate(float64(t.UnixMilli()))
