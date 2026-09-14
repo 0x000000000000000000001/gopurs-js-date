@@ -1,5 +1,14 @@
 # JS Date
 
+## Local Go development
+
+This checkout is part of the gopurs library family. Use the
+[local Go development guide](../gopurs/README.md#develop-one-library-locally)
+for toolchain setup, sibling dependencies, Spago configuration and Go commands.
+The existing npm, Bower and Dhall commands below retain their JavaScript or
+upstream roles.
+
+
 [![CI](https://github.com/purescript-contrib/purescript-js-date/workflows/CI/badge.svg?branch=main)](https://github.com/purescript-contrib/purescript-js-date/actions?query=workflow%3ACI+branch%3Amain)
 [![Release](https://img.shields.io/github/release/purescript-contrib/purescript-js-date.svg)](https://github.com/purescript-contrib/purescript-js-date/releases)
 [![Pursuit](https://pursuit.purescript.org/packages/purescript-js-date/badge)](https://pursuit.purescript.org/packages/purescript-js-date)
